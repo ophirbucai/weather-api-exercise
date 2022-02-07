@@ -34,7 +34,7 @@ app.get("/weather", (req, res) => {
   try {
     getWeather();
   } catch (e) {
-    res.send("Error: " + e);
+    res.send(`Couldn't get weather for ${query}. Error: ${e}`);
   }
 });
 
